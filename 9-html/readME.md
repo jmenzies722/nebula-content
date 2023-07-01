@@ -6,6 +6,4 @@ Welcome to the Product Vision Pro project! This page showcases the Apple Vision 
 ## Introduction
 The page starts with a captivating introduction to the Apple Vision Pro. The header displays the product name, and an appealing image of the product grabs attention. To learn more about the Apple Vision Pro, click the "Learn more" link below the image. It will direct you to the official Apple website, where you can explore additional details.
 
-![Intro Picture](.//pictures/Screenshot%202023-06-30%20at%203.20.11%20PM.png)
-
-[Learn more](https://www.apple.com/)
+![Intro Picture](./pictures/Screenshot%202023-06-30%20at%2011.39.40%20AM.png)
