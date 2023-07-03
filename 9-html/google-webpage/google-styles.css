@@ -153,3 +153,8 @@ footer {
     color: #8f94a0;
     text-decoration: underline;
 }
+
+.footer-right {
+    display: flex;
+    align-items: center;
+}
