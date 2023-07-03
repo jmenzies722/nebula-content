@@ -103,10 +103,11 @@ main {
 }
 
 footer {
-    background-color: #212529;
+    background-color: #1a1d20;
     padding: 15px;
     display: flex;
-    justify-content: space-between; /* Updated */
+    justify-content: space-between;
+    align-items: center; /* Added */
     position: fixed;
     bottom: 0;
     left: 0;
@@ -115,11 +116,15 @@ footer {
 
 .footer-section {
     margin-right: 10px;
+    flex: 1; /* Added */
+    display: flex; /* Added */
+    justify-content: center; /* Added */
+    align-items: center; /* Added */
 }
 
 .footer-link {
-    margin-right: 3px;
-    color: #fff;
+    margin-right: 15px;
+    color: #bdc1c6;
     text-decoration: none;
     transition: color 0.3s ease;
     font-size: 12px;
@@ -133,17 +138,16 @@ footer {
 .carbon-container {
     display: flex;
     align-items: center;
-    margin-left: auto; /* Added */
 }
 
 .carbon-text {
-    color: #fff;
+    color: #bdc1c6;
     font-size: 12px;
 }
 
 .carbon-link {
     margin-left: 5px;
-    color: #fff;
+    color: #bdc1c6;
     text-decoration: none;
     transition: color 0.3s ease;
     font-size: 12px;
@@ -152,9 +156,4 @@ footer {
 .carbon-link:hover {
     color: #8f94a0;
     text-decoration: underline;
-}
-
-.footer-right {
-    display: flex;
-    align-items: center;
 }
