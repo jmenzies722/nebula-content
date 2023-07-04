@@ -3,6 +3,8 @@
 <head>
     <title>Google Clone</title>
     <link rel="stylesheet" href="google-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 <body>
     <header>
@@ -10,13 +12,13 @@
             <div class="nav-left">
                 <a href="https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header" class="nav-link">About</a>
                 <a href="https://store.google.com/US/?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-US&pli=1" class="nav-link">Store</a>
-                <a href="#https://www.google.com/maps/@41.8086554,-72.7215382,15z?entry=ttu" class="nav-link">Maps</a>
+                <a href="https://www.google.com/maps" class="nav-link">Maps</a>
                 <a href="https://www.youtube.com" class="nav-link">YouTube</a>
             </div>
             <div class="nav-right">
                 <a href="https://mail.google.com/mail/u/0/" class="nav-link">Gmail</a>
-                <a href="https://myaccount.google.com" class="nav-link">Sign In</a>
                 <a href="https://www.google.com/imghp?hl=en&ogbl" class="nav-link">Images</a>
+                <img src="./IMG_2587.jpg" alt="Profile Image" class="profile-image">
             </div>
         </nav>
     </header>
@@ -25,7 +27,14 @@
             <img src="./Screenshot 2023-07-02 at 4.51.35 PM.png" alt="Google Logo" class="logo">
         </div>
         <div class="search-container">
-            <input type="text" class="search-input" placeholder="Search...">
+            <div class="search-input-container">
+                <span class="search-icons">
+                    <i class="fas fa-search search-icon"></i>
+                    <i class="fas fa-images images-icon"></i>
+                </span>
+                <input type="text" class="search-input" placeholder="">
+            </div>
+            
             <div class="search-buttons">
                 <button class="search-btn">Google Search</button>
                 <button class="search-btn">I'm Feeling Lucky</button>
@@ -39,7 +48,7 @@
             <a href="https://www.google.com/search/howsearchworks/?fg=1" class="footer-link">How Search works</a>
         </div>
         <div class="footer-section">
-            <a class="carbon-link" href="https://sustainability.google/carbon-free/?utm_source=googlehpfooter&utm_medium=housepromos&utm_campaign=bottom-footer&utm_content=#home">Carbon Natural Since 2007</a>
+            <a class="carbon-link" href="https://sustainability.google/carbon-free/?utm_source=googlehpfooter&utm_medium=housepromos&utm_campaign=bottom-footer&utm_content=#home">Carbon neutral since 2007</a>
         </div>
         <div class="footer-section">
             <a href="https://policies.google.com/privacy?hl=en&fg=1" class="footer-link">Privacy</a>
