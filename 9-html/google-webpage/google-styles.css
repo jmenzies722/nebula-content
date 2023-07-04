@@ -90,7 +90,7 @@ main {
 .images-icon {
     font-size: 12px;
     color: #bdc1c6;
-    margin-right: 350px;
+    margin-right: 355px;
 }
 
 .search-input {
@@ -129,6 +129,7 @@ main {
     border-radius: 4px;
     margin-right: 10px;
     cursor: pointer;
+    text-decoration: none;
     color: #fff;
     transition: background-color 0.2s ease;
 }
