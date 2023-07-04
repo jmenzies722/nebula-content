@@ -2,10 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
     background-color: #1f2124;
     color: #fff;
     font-size: 14px;
@@ -15,32 +15,32 @@ header {
     background-color: #1f2124;
     padding: 5px
 }
-
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center; /* Align items vertically in the center */
-    padding: 6px 16px;
+    padding: 10px 20px;
 }
 
 .nav-left {
-    flex: 2;
+    flex: 1;
 }
 
-
 .nav-right {
-    flex: 2;
+    flex: 1;
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
+
 .nav-link {
-    margin-right: 6px;
+    margin-right: 12px;
     color: #bdc1c6;
     text-decoration: none;
     transition: color 0.3s ease;
-    font-size: 12px;
+    font-size: 14px;
 }
+
 
 .nav-link:hover {
     color: #8f94a0;
@@ -151,7 +151,7 @@ footer {
 
 .footer-section {
     margin-right: 10px;
-    flex: 1;
+    padding-left: 20px;
     display: flex;
     justify-content: center; 
     align-items: center; 
@@ -161,6 +161,7 @@ footer {
     margin-right: 15px;
     color: #bdc1c6;
     text-decoration: none;
+    flex-wrap: nowrap;
     transition: color 0.3s ease;
     font-size: 12px;
 }
@@ -173,7 +174,9 @@ footer {
 .carbon-container {
     display: flex;
     align-items: center;
+    margin-right: auto;
 }
+
 
 .carbon-text {
     color: #bdc1c6;
@@ -181,7 +184,7 @@ footer {
 }
 
 .carbon-link {
-    margin-left: 5px;
+    margin-right: 125px;
     color: #bdc1c6;
     text-decoration: none;
     transition: color 0.3s ease;
