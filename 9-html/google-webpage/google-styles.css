@@ -61,7 +61,7 @@ main {
 }
 
 .logo {
-    max-width: 200px;
+    max-width: 250px;
     height: auto;
 }
 
@@ -90,12 +90,12 @@ main {
 .images-icon {
     font-size: 12px;
     color: #bdc1c6;
-    margin-right: 355px;
+    margin-right: 350px;
 }
 
 .search-input {
-    padding: 8px 10px;
-    padding-left: 40px;
+    padding: 11px 10px;
+    padding-left: 20px;
     width: 400px;
     border: none;
     border-radius: 20px;
@@ -103,7 +103,7 @@ main {
     background-color: rgba(255, 255, 255, 0.2);
     color: #fff;
     transition: background-color 0.3s ease;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .search-input:focus {
