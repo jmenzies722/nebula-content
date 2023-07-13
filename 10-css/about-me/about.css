@@ -70,3 +70,54 @@ p {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     margin-top: 20px;
   }
+
+  .button:hover {
+    background-color: #555;
+  }
+
+  .dark-mode {
+    background-color: #333;
+    color: #fff;
+  }
+
+  .section {
+    margin-bottom: 60px;
+    text-decoration: underline;
+  }
+
+.section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+    transition: color 0.3s;
+  }
+
+
+.section p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+  transition: color 0.3s;
+}
+
+.section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.section ul li {
+  margin-bottom: 10px;
+}
+
+.section ul li img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.section ul li img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
