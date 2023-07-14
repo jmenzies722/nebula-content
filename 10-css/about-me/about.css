@@ -5,63 +5,62 @@ body {
     background-color: #f8f8f8;
     color: #333;
     transition: background-color 0.3s, color 0.3s;
-  }
-  
-  .container {
+}
+
+.container {
     max-width: 800px;
     margin: 0 auto;
     padding: 100px;
     transition: color 0.3s;
-  }
-  
-  h1 {
+}
+
+h1 {
     margin-top: 10px;
     text-align: center;
     font-size: 50px;
-  }
-  
-  h1:hover {
-    text-decoration: underline;
-  }
+}
 
-  
-  h2 {
+h1:hover {
+    text-decoration: underline;
+}
+
+h2 {
     text-align: center;
     font-size: 25px;
     padding: 5px;
-  }
-  
-  p {
+}
+
+p {
     text-align: center;
     line-height: 2.0;
     font-size: 16px;
     margin-bottom: 40px;
-  }
-  
-  .profile-container {
+}
+
+.profile-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 40px;
-  }
-  
-  .profile-pic {
+}
+
+.profile-pic {
     width: 425px;
     height: 425px;
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     transition: filter 0.3s;
-  }
-  
-  .button-container {
+}
+
+.button-container {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
-  }
-  
-  .button {
+}
+
+.button {
     display: inline-block;
     padding: 10px 30px;
     background-color: #333;
@@ -73,206 +72,283 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     margin-top: 20px;
     font-size: 14px;
-  }
-  
-  .button:hover {
+}
+
+.button:hover {
     background-color: #555;
-  }
-  
-  .dark-mode {
+}
+
+.dark-mode {
     background-color: #333;
     color: #fff;
-  }
-  
-  .section {
-    margin-bottom: 60px;
-  }
+}
 
-    .section h1:hover {
+.section {
+    margin-bottom: 60px;
+}
+
+.section h1:hover {
     text-decoration: underline;
- }
-  .section h2 {
+}
+
+.section h2 {
     font-size: 24px;
     margin-bottom: 10px;
     color: #333;
     transition: color 0.3s;
-  }
-  
-  .section p {
+}
+
+.section p {
     margin-bottom: 20px;
     line-height: 1.6;
     transition: color 0.3s;
-  }
-  
-  .section ul {
+}
+
+.section ul {
     list-style-type: none;
     padding: 0;
-  }
-  
-  .section ul li {
+}
+
+.section ul li {
     margin-bottom: 10px;
-  }
-  
-  .section ul li img {
+}
+
+.section ul li img {
     width: 80px;
     height: 80px;
     border-radius: 50%;
     object-fit: cover;
     margin-right: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
-  }
-  
-  .section ul li img:hover {
+}
+
+.section ul li img:hover {
     transform: scale(1.1);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-  }
-  
-  .favorite-subject ul li img {
+}
+
+.favorite-subject ul li img {
     width: 80px;
     height: 80px;
     border-radius: 50%;
     object-fit: cover;
     margin-right: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
-  }
-  
-  .favorite-subject ul li img:hover {
+}
+
+.favorite-subject ul li img:hover {
     transform: scale(1.1);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-  }
-  
-  .skills {
-    margin-top: 60px;
+}
+
+/* Skills section with black and white theme */
+.skills {
+    margin-top: px;
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  .skills h2:hover {
+}
+
+.skills h2:hover {
     text-decoration: underline;
-  }
-  .skills h2 {
+}
+
+.skills h2 {
     font-size: 24px;
     margin-bottom: 20px;
     color: #333;
     transition: color 0.3s;
-  }
-  
-  .skills ul {
+}
+
+.skills ul {
     list-style-type: none;
     padding: 0;
+    text-decoration: none;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-  }
-  
-  .skills li {
+}
+
+.skills li {
     margin-bottom: 10px;
     margin-right: 15px;
     padding: 8px 12px;
-    background-color: #333;
-    color: #fff;
+    background-color: #303030; /* Black background */
+    color: #fff; /* White text */
     border-radius: 4px;
     font-size: 14px;
-    transition: transform 0.3s, background-color 0.3s;
+    transition: transform 0.3s, background-color 0.3s, color 0.3s;
     cursor: pointer;
-  }
-  
-  .skills li:hover {
+}
+
+.skills li:hover {
     transform: scale(1.1);
-    background-color: #555;
-  }
-  
-  .fun-feature {
-    text-align: center;
-    margin-top: 60px;
-  }
-  
-  .fun-feature h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #333;
-    transition: color 0.3s;
-  }
-  
-  .fun-feature p {
-    margin-bottom: 20px;
-    line-height: 1.6;
-    transition: color 0.3s;
-  }
-  
-  .fun-feature .button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #333;
+    background-color: #2d2c2c; /* White background on hover */
+    text-decoration: none; /* No underline on hover */
+}
+
+a {
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* The color will be the same as the parent element */
+}
+
+a:hover {
+    color: inherit; /* Keeps the same color even on hover */
+}
+
+.dark-mode .container,
+.dark-mode h1,
+.dark-mode p,
+.dark-mode .section h2,
+.dark-mode .section p,
+.dark-mode .skills h2,
+.dark-mode .section ul li img,
+.dark-mode .favorite-subject ul li img {
     color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    margin-top: 10px;
-  }
-  
-  .fun-feature .button:hover {
-    background-color: #555;
-  }
-  
-  .dark-mode .container,
-  .dark-mode h1,
-  .dark-mode p,
-  .dark-mode .section h2,
-  .dark-mode .section p,
-  .dark-mode .skills h2,
-  .dark-mode .fun-feature h2,
-  .dark-mode .fun-feature p {
-    color: #fff;
-  }
-  
-  .dark-mode .profile-pic {
+}
+
+.dark-mode .profile-pic {
     filter: brightness(85%);
-  }
-  
-  /* Added CSS for the travel destinations section */
-  .section ul li {
+}
+
+.section ul li {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
-  }
-  
-  .circular-image {
+}
+
+.circular-image {
     width: 125px;
     height: 125px;
     border-radius: 50%;
     object-fit: cover;
     margin-right: 10px;
-  }
-  
-  .container {
+}
+
+.container {
     opacity: 0;
     animation: fade-in 1s forwards;
-  }
-  
-  @keyframes fade-in {
+}
+
+@keyframes fade-in {
     from {
-      opacity: 0;
+        opacity: 0;
     }
     to {
-      opacity: 1;
+        opacity: 1;
     }
-  }
-  
-  @keyframes bounce {
-    0%, 100% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.1);
-    }
-  }
-  
-  /* Add text hover underline effect */
-  .section:hover h2,
-  .fun-feature:hover h2 {
+}
+
+
+/* Add text hover underline effect */
+.section:hover h2 {
     text-decoration: underline;
+}
+
+/* Style the scroll to top button */
+#scrollToTopButton {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #888484; /* Set a background color */
+    color: #ffffff; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 1px; /* Some padding */
+    border-radius: 50%; /* Circular shape */
+    font-size: 22px; /* Increase font size */
+    width: 50px; /* Fixed width */
+    height: 50px; /* Fixed height */
+    text-align: center; /* Center the arrow */
+    line-height: 50px; /* Vertically center the arrow */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* Add box-shadow */
+    transition: background-color 0.3s ease; /* Add transition for hover effect */
+}
+
+#scrollToTopButton:hover {
+    background-color: #6e6c6ca3; /* Darken the button color on hover */
+}
+
+/* Style the content section */
+.content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f8f8f8; /* Light background color */
+    color: #333; /* Dark text color */
+    border-radius: 6px;
+}
+
+/* Dark mode */
+body.dark-mode {
+    background-color: #222222;
+    color: #fff;
+}
+
+body.dark-mode .content {
+    background-color: #2c2c2c; /* Dark background color */
+    color: #fff; /* Light text color */
+}
+
+
+.section {
+    margin-bottom: 60px;
   }
   
+  .collapsible {
+    background-color: #272728;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    border-radius: 6px;
+    margin-bottom: 10px;
+  }
+  
+  .active,
+  .collapsible:hover {
+    background-color: #2f2f2f;
+  }
+  
+  .content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f8f8f8;
+    color: #333;
+    border-radius: 6px;
+  }
+  
+  .contact-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .contact-list li {
+    margin: 10px;
+    text-align: center;
+  }
+  
+  .contact-list a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #e9e8e8;
+  }
+  
+  .contact-list i {
+    margin-right: 5px;
+  }
