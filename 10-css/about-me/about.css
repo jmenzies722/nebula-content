@@ -245,7 +245,7 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Style the scroll to top button */
+
 #scrollToTopButton {
     display: none; /* Hidden by default */
     position: fixed; /* Fixed/sticky position */
