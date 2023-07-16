@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ID Card Generator</title>
+    <link rel="stylesheet" type="text/css" href="id.css">
+</head>
+<body>
+    <div class="main">
+        <h1>New York Style ID Card</h1>
+        <div class="container">
+            <div id="form">
+                <input type="text" id="name" placeholder="Name"><br>
+                <input type="text" id="id" placeholder="ID"><br>
+                <input type="text" id="address" placeholder="Address"><br>
+                <input type="text" id="funfact" placeholder="Fun Fact"><br>
+                <button onclick="updateID()">Update ID Card</button>
+            </div>
+            <div id="idcard">
+                <div id="cardheader">New York State</div>
+                <img id="cardimg" src="andrew-george-g-fm27_BRyQ-unsplash.jpg">
+                <div id="cardname"></div>
+                <div id="cardid"></div>
+                <div id="cardaddress"></div>
+                <div id="cardfunfact"></div>
+            </div>
+        </div>
+    </div>
+    <script src="id.js"></script>
+</body>
+</html>

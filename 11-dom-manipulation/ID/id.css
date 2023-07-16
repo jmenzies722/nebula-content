@@ -1,0 +1,92 @@
+body {
+    background: #000;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: white;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+}
+
+h1 {
+    margin-bottom: 50px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#idcard {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    color: white;
+    padding: 20px;
+}
+
+#cardheader {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    align-self: center;
+}
+
+#cardimg {
+    width: 70%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid white;
+}
+
+#cardname, #cardid, #cardaddress, #cardfunfact {
+    margin-top: 15px;
+    font-size: 1.1em;
+    align-self: center;
+}
+
+#cardname {
+    font-size: 1.4em;
+    font-weight: bold;
+}
