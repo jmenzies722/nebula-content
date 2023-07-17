@@ -1,8 +1,20 @@
-@import url('https://fonts.googleapis.com/css2family=Poppins:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
 
-body{
+:root {
+    --bg-opacity: 0.05;
+    --btn-opacity: 0.5;
+    --transition-duration: 0.5s;
+    --scale-hover: 1.02;
+    --blur-bg: 20px;
+    --blur-input: 5px;
+    --main-font: 'Poppins', sans-serif;
+    --gap: 30px;
+    --border-radius: 15px;
+}
+
+body {
     margin: 0;
-    padding:0;
+    padding: 0;
     font-family: var(--main-font);
     overflow: hidden;
     position: relative;
@@ -11,18 +23,18 @@ body{
     transition: all var(--transition-duration) ease;
 }
 
-body::before{
-    content:"";
+body::before {
+    content: "";
     position: absolute;
     top: -10%;
     left: -10%;
     width: 120%;
     height: 120%;
     background: url("andres-jasso-Aw9N5tlFw6E-unsplash.jpg") no-repeat center center fixed;
-    background-size: cover ;
+    background-size: cover;
 }
 
-.main{
+.main {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,7 +44,7 @@ body::before{
     position: relative;
 }
 
-.container{
+.container {
     display: flex;
     gap: var(--gap);
     align-items: flex-start;
@@ -52,4 +64,93 @@ body::before{
     box-sizing: border-box;
     margin: 0 auto;
     border: 3px solid rgba(1, 1, 1, 0.411);
+}
+
+#id-form input,
+#id-form select {
+    padding: 10px;
+    border: none;
+    border-radius: var(--border-radius);
+    background: rgba(255, 255, 255, var(--bg-opacity));
+    backdrop-filter: blur(var(--blur-input));
+    color: white;
+    transition: all var(--transition-duration) ease;
+}
+
+#id-form input:hover,
+#id-form select:hover {
+    transform: scale(var(--scale-hover));
+}
+
+#id-form button {
+    padding: 10px;
+    margin-top: 20px;
+    background: linear-gradient(145deg, #5A5A5A, #3D3D3D);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all var(--transition-duration) ease;
+    border-radius: var(--border-radius);
+    box-shadow: 6px 6px 12px #2a2a2a, -6px -6px 12px #4e4e4e;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#id-form button:hover {
+    background: linear-gradient(145deg, #3D3D3D, #5A5A5A);
+    box-shadow: inset 4px 4px 8px #2a2a2a, inset -4px -4px 8px #4e4e4e;
+    transform: translateY(-3px);
+}
+
+#id-card {
+    background: #3D3D3D;
+    padding: 60px;
+    border-radius: var(--border-radius);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gap);
+    box-shadow: 10px 10px 20px #2a2a2a, -10px -10px 20px #4e4e4e;
+    transition: all var(--transition-duration) ease;
+    animation: idCardPop var(--transition-duration) ease-in-out;
+    max-width: 500px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+#id-card:hover {
+    transform: scale(var(--scale-hover));
+}
+
+#card-img {
+    width: 50%;
+    border-radius: 5%;
+    object-fit: cover;
+    transition: all var(--transition-duration) ease;
+}
+
+#card-img:hover {
+    transform: scale(1.3);
+}
+
+#card-name,
+#card-id,
+#card-email,
+#card-jobtitle {
+    color: rgb(249, 248, 248);
+    margin: 0;
+}
+
+@keyframes idCardPop {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.0);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
