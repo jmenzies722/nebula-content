@@ -1,1 +1,32 @@
-!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tesla Employee ID Card Generator</title>
+    <link rel="stylesheet"type="text/css" href="/11-dom-manipulation/ID/id.css">
+</head>
+<body>
+    <main class="main">
+        <section class="container">
+            <form id="id-form">
+                <h1 class="title">Digital Tesla Employee ID</h1>
+                <input type="text" id="name" placeholder="Full Name" required>
+                <input type="text" id="id" placeholder="Employee ID" required>
+                <input type="text" id="email" placeholder="Tesla Email" required>
+                <input type="text" id="jobtitle" placeholder="Job Title" required>
+                <button type="buton" onclick="updateID()">Create Employee ID</button>
+            </form>
+            <div id="id-card">
+                <h2 class="card-header">Tesla Employee ID</h2>
+                <img id="card-img" src="prometheus-8TqdrogVGfs-unsplash.jpg" alt="Employee Photo">
+                <p id="card-name"></p>
+                <p id="card-id"></p>
+                <p id="card-email"></p>
+                <p id="card-jobtitle"></p>
+            </div>
+        </section>
+    </main>
+    <script src="id.js"></script>
+</body>
+</html>

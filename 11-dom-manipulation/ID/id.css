@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2family=Poppins:wght@300;400;700&display=swap');
+
+body{
+    margin: 0;
+    padding:0;
+    font-family: var(--main-font);
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+    color: white;
+    transition: all var(--transition-duration) ease;
+}
+
+body::before{
+    content:"";
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 120%;
+    height: 120%;
+    background: url("andres-jasso-Aw9N5tlFw6E-unsplash.jpg") no-repeat center center fixed;
+    background-size: cover ;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: var(--gap);
+    position: relative;
+}
+
+.container{
+    display: flex;
+    gap: var(--gap);
+    align-items: flex-start;
+}
+
+#id-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+    background: rgba(255, 255, 255, var(--bg-opacity));
+    backdrop-filter: blur(var(--blur-bg));
+    border-radius: 40px;
+    padding: 50px;
+    transition: all var(--transition-duration) ease;
+    max-width: 500px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    border: 3px solid rgba(1, 1, 1, 0.411);
+}
