@@ -8,30 +8,35 @@
 </head>
 <body>
   <div class="calculator">
+    <h2>Simple But Effective 🤷‍♂️<br>Also Love Green Apples 🍏 </h2>
     <div class="display">
       <input type="text" id="result" readonly>
     </div>
     <div class="buttons">
-      <button onclick="clearResult()">C</button>
-      <button onclick="appendNumber('7')">7</button>
-      <button onclick="appendNumber('8')">8</button>
-      <button onclick="appendNumber('9')">9</button>
-      <button onclick="appendOperator('/')">/</button>
-      <button onclick="appendNumber('4')">4</button>
-      <button onclick="appendNumber('5')">5</button>
-      <button onclick="appendNumber('6')">6</button>
-      <button onclick="appendOperator('*')">*</button>
-      <button onclick="appendNumber('1')">1</button>
-      <button onclick="appendNumber('2')">2</button>
-      <button onclick="appendNumber('3')">3</button>
-      <button onclick="appendOperator('-')">-</button>
-      <button onclick="appendNumber('0')">0</button>
-      <button onclick="appendOperator('.')">.</button>
-      <button onclick="calculateResult()">=</button>
-      <button onclick="appendOperator('+')">+</button>
+      <button onclick="calculator.clearResult()">C</button>
+      <button onclick="calculator.appendNumber('7')">7</button>
+      <button onclick="calculator.appendNumber('8')">8</button>
+      <button onclick="calculator.appendNumber('9')">9</button>
+      <button onclick="calculator.appendOperator('/')">/</button>
+      <button onclick="calculator.appendNumber('4')">4</button>
+      <button onclick="calculator.appendNumber('5')">5</button>
+      <button onclick="calculator.appendNumber('6')">6</button>
+      <button onclick="calculator.appendOperator('*')">*</button>
+      <button onclick="calculator.appendNumber('1')">1</button>
+      <button onclick="calculator.appendNumber('2')">2</button>
+      <button onclick="calculator.appendNumber('3')">3</button>
+      <button onclick="calculator.appendOperator('-')">-</button>
+      <button onclick="calculator.appendNumber('0')">0</button>
+      <button onclick="calculator.calculateResult()">=</button>
+      <button onclick="calculator.appendOperator('+')">+</button>
+      <a href="https://www.linkedin.com/in/yourLinkedInProfile" target="_blank" rel="noopener noreferrer">
+        <button>👋</button>
+      </a>
+      <a href="https://github.com/yourGitHubUsername" target="_blank" rel="noopener noreferrer">
+        <button>🚀</button>
+      </a>
     </div>
   </div>
-  
   <script src="calc.js"></script>
 </body>
 </html>
