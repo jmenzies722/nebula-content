@@ -124,14 +124,6 @@ body {
     transform: scale(1.1);
 }
 
-@keyframes neonEffect {
-    0% {
-        text-shadow: 2px 2px 4px rgba(19, 170, 184, 0.818);
-    }
-    100% {
-        text-shadow: 0px 0px 10px rgba(17, 155, 155, 0.8), 0px 0px 20px rgba(13, 221, 141, 0.5), 0px 0px 30px rgba(11, 185, 173, 0.536);
-    }
-}
 
 .social-icons {
     display: flex;
