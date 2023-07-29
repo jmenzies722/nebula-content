@@ -46,6 +46,8 @@ body::before {
   justify-content: space-between;
 }
 
+
+
 .display {
   flex-grow: 1;
   display: flex;
@@ -55,7 +57,10 @@ body::before {
   color: #66eb8c;
   font-size: 2.5em;
   line-height: 1.2;
+  white-space: nowrap;  /* Add this */
+  overflow: auto;  /* Add this */
 }
+
 
 .keys {
   display: grid;
@@ -139,5 +144,29 @@ body::before {
   margin-bottom: 5px;
 }
 
-/* Your existing CSS code...
- 
+/* Add this to your existing CSS code or create a new CSS file and link it in your HTML */
+
+/* Styling for the microphone icon button */
+.key.voice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  border-radius: 8px;
+  color: white;
+  font-size: 1.5em;
+  background: rgba(0, 0, 0, 0.4);
+  transition: background 0.3s;
+  cursor: pointer; /* Add a cursor pointer to indicate it's clickable */
+}
+
+/* Styling for the microphone icon */
+.key.voice i {
+  font-family: 'Material Icons'; /* Ensure you have access to the Material Icons font */
+  font-size: 28px; /* Adjust the font size as needed */
+}
+
+/* Styling when the microphone icon button is active (clicked) */
+.key.voice:active {
+  background: rgba(0, 0, 0, 0.6);
+}
