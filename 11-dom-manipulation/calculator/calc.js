@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
     'plus': '+',
     'minus': '-',
     'divided by': '/',
-    'open': '(',
-    'close': ')',
+    'left': '(',
+    'right': ')',
     'point' : '.',
     'percent' : '%'
 };

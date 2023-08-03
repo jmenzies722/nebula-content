@@ -141,6 +141,8 @@
   }
 }
 
+
+
 /* Styles for the voice button, same as for the equals button */
 .key.voice {
   animation: pulsate 1.5s ease-in-out infinite;
