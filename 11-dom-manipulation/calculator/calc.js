@@ -1,6 +1,11 @@
+// Once the DOM is fully loaded, the function is executed.
 document.addEventListener('DOMContentLoaded', () => {
+  // Section 1: Variables and Objects
+  // Selectors for input and output fields on the HTML page.
   const inputDiv = document.querySelector('.input');
   const outputDiv = document.querySelector('.output');
+
+  // Maps spoken words to the corresponding mathematical operators.
   const wordToOperator = {
       'times': '*',
       'multiplied by': '*',
@@ -9,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
       'divided by': '/'
   };
 
+  // Maps spoken word numbers to the corresponding numerical values.
   const numberWordsToNumbers = {
       'zero': 0,
       'one': 1,
@@ -23,11 +29,15 @@ document.addEventListener('DOMContentLoaded', () => {
       'ten': 10
   };
 
+  // Section 2: Clearing the Input
+  // Function to clear the input and output fields.
   function clearInput() {
       inputDiv.innerText = '';
       outputDiv.innerText = '';
   }
 
+  // Section 3: Calculation Functions
+  // The calculate function processes a string expression and evaluates it.
   function calculate(expression) {
       let numbers = [];
       let operators = [];
@@ -61,6 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return numbers[0];
   }
 
+  // The doMath function executes the mathematical operations.
   function doMath(numbers, operators) {
       let num2 = numbers.pop();
       let num1 = numbers.pop();
@@ -85,10 +96,14 @@ document.addEventListener('DOMContentLoaded', () => {
       }
   }
 
+  // Section 4: Processing the Input
+  // Function that manages the input processing, calculation, and displaying of the result.
   function calculateInput() {
-      let input = inputDiv.innerText;
-      if(input === '') return;
+      let input = inputDiv.innerText.trim();
+      if (input === '') return;
       try {
+          input = input.replace(/\s*(\+|\-|\*|\/|\(|\))\s*/g, '$1');
+          inputDiv.innerText = input;
           let output = calculate(input);
           outputDiv.innerText = output;
       } catch {
@@ -96,17 +111,19 @@ document.addEventListener('DOMContentLoaded', () => {
       }
   }
 
+  // Section 5: Event Listeners on Keys
+  // This loop sets an event listener on each key of the calculator.
   document.querySelectorAll('.key').forEach(key => {
       key.addEventListener('click', e => {
           const action = e.currentTarget.dataset.key;
           const text = e.currentTarget.innerText.trim();
-          if(action === 'clear') {
+          if (action === 'clear') {
               clearInput();
-          } else if(action === 'backspace') {
+          } else if (action === 'backspace') {
               inputDiv.innerText = inputDiv.innerText.slice(0, -1);
-          } else if(action === 'voice') {
+          } else if (action === 'voice') {
               handleVoiceInput();
-          } else if(action === '=') {
+          } else if (action === '=') {
               calculateInput();
           } else {
               if (['+', '-', '*', '/'].includes(action)) {
@@ -118,6 +135,8 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   });
 
+  // Section 6: Event Listener on Key Press
+  // This event listener allows the user to use the calculator with their keyboard.
   document.addEventListener('keydown', e => {
       const key = e.key;
       const validKeys = '0123456789.+-*/()%';
@@ -136,12 +155,14 @@ document.addEventListener('DOMContentLoaded', () => {
       }
   });
 
+  // Section 7: Voice Recognition
+  // Function responsible for voice recognition.
   function handleVoiceInput() {
     const recognition = new window.webkitSpeechRecognition();
     recognition.interimResults = true;
     recognition.continuous = false;
     recognition.lang = 'en-US';
-  
+
     recognition.onresult = (event) => {
         for(let i = event.resultIndex; i < event.results.length; ++i) {
             if(event.results[i].isFinal) {
@@ -150,11 +171,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     const operator = wordToOperator[word];
                     transcript = transcript.replace(new RegExp(word, 'g'), operator);
                 }
-                // Convert 'x' and 'times' to '*'
                 transcript = transcript.replace(/times/g, '*');
                 transcript = transcript.replace(/x/g, '*');
   
-                // Convert word numbers to actual numbers
                 for(let word in numberWordsToNumbers) {
                     const number = numberWordsToNumbers[word];
                     transcript = transcript.replace(new RegExp("\\b" + word + "\\b", 'g'), number);
@@ -168,5 +187,4 @@ document.addEventListener('DOMContentLoaded', () => {
   
     recognition.start();
   }
-  
 });
