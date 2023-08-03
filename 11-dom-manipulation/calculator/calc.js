@@ -7,12 +7,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Maps spoken words to the corresponding mathematical operators.
   const wordToOperator = {
-      'times': '*',
-      'multiplied by': '*',
-      'plus': '+',
-      'minus': '-',
-      'divided by': '/'
-  };
+    'times': '*',
+    'multiplied by': '*',
+    'plus': '+',
+    'minus': '-',
+    'divided by': '/',
+    'open': '(',
+    'close': ')',
+    'point' : '.',
+    'percent' : '%'
+};
+
 
   // Maps spoken word numbers to the corresponding numerical values.
   const numberWordsToNumbers = {
@@ -171,19 +176,18 @@ document.addEventListener('DOMContentLoaded', () => {
                     const operator = wordToOperator[word];
                     transcript = transcript.replace(new RegExp(word, 'g'), operator);
                 }
-                transcript = transcript.replace(/times/g, '*');
-                transcript = transcript.replace(/x/g, '*');
-  
+    
                 for(let word in numberWordsToNumbers) {
                     const number = numberWordsToNumbers[word];
                     transcript = transcript.replace(new RegExp("\\b" + word + "\\b", 'g'), number);
                 }
-  
+    
                 inputDiv.innerText = transcript;
                 calculateInput();
             }
         }
     };
+    
   
     recognition.start();
   }

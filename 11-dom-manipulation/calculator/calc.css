@@ -17,7 +17,7 @@
     position: relative;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to right, #2b2c2d, #494a4a);
+    background: linear-gradient(to right, #2b2c2d, #3a8484);
   }
   
   /* This creates a pseudo-element that is as large as the body. It takes the background of the parent body,
@@ -73,34 +73,34 @@
   flex-direction: column;
   justify-content: space-around;
   padding: 2rem;
-  color: #66eb8c;
+  color: #48b1b1;
   font-size: 2.5em;
   line-height: 1.2;
   overflow: auto;
-  transition: font-size 0.2s ease-in-out;  /* Enables smooth transition of the font-size */
-  word-wrap: break-word;  /* Allows long words to be able to be broken and wrap onto the next line */
+  transition: font-size 0.2s ease-in-out;  
+  word-wrap: break-word; 
 }
 
 /* Defines the properties for the keys on the calculator */
 .keys {
-  display: grid;  /* Displays the container as a grid */
-  grid-template-columns: repeat(4, 1fr);  /* Creates a grid with four columns that equally share the space */
-  gap: 0.5em;  /* Defines the size of the gap between the grid cells */
-  padding: 1em;  /* Adds some padding around the grid */
+  display: grid; 
+  grid-template-columns: repeat(4, 1fr);  
+  gap: 0.5em;  
+  padding: 1em;  
 }
 
 /* Defines the properties for each individual key on the calculator */
 .keys .key {
   display: flex;
-  justify-content: center;  /* Centers the key labels horizontally */
-  align-items: center;  /* Centers the key labels vertically */
-  height: 60px;  /* Sets a fixed height for the keys */
-  border-radius: 8px;  /* Rounds the corners of the keys */
-  color: white;  /* Sets the color of the key labels */
-  font-size: 1.5em;  /* Sets the size of the key labels */
-  background: rgba(0, 0, 0, 0.4);  /* Gives the keys a slightly transparent background */
-  transition: background 0.3s;  /* Adds a transition effect when the background color changes */
-  padding: 0.4rem 1rem;  /* Adds some padding to the keys */
+  justify-content: center; 
+  align-items: center;  
+  height: 60px; 
+  border-radius: 8px; 
+  color: rgb(22, 169, 177);  
+  font-size: 1.5em; 
+  background: rgba(0, 0, 0, 0.4); 
+  transition: background 0.3s; 
+  padding: 0.4rem 1rem;  
 }
 
 /* Defines the hover effect for the keys */
@@ -118,12 +118,12 @@
 
 /* Defines the color for the operator keys */
 .keys .key.operator {
-  color: #66eb66;
+  color: #389696
 }
 
 /* Defines the color for the action keys */
 .keys .key.action {
-  color: #26fea0;
+  color: #379f9f
 }
 
 /* Adds an animation effect to the equals key */
@@ -177,7 +177,7 @@
   align-items: center;
   height: 60px;
   border-radius: 8px;
-  color: white;
+  color: #3a8484;
   font-size: 1.5em;
   background: rgba(0, 0, 0, 0.4);
   transition: background 0.3s;
