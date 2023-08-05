@@ -3,6 +3,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Section 1: Variables and Objects
     const inputDiv = document.querySelector('.input');
     const outputDiv = document.querySelector('.output');
+    const micButton = document.querySelector(".voice .material-icons");
+
+
+    let micStatus = false;
    // Maps spoken words to the corresponding mathematical operators.
     const wordToOperator = {
       'times': '*',
@@ -12,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
       'divided by': '/',
       'left': '(',
       'right': ')',
-      'point' : '.'
+      'point' : '.',
     };
    // Maps spoken word numbers to the corresponding numerical values.
     const numberWordsToNumbers = {
@@ -171,38 +175,78 @@ document.addEventListener('DOMContentLoaded', () => {
   
     // Section 7: Voice Recognition
   // Function responsible for voice recognition.
-    function handleVoiceInput() {
-      const recognition = new window.webkitSpeechRecognition();
-      recognition.interimResults = true;
-      recognition.continuous = false;
-      recognition.lang = 'en-US';
-  
-      recognition.onresult = (event) => {
-          for(let i = event.resultIndex; i < event.results.length; ++i) {
-              if(event.results[i].isFinal) {
-                  let transcript = event.results[i][0].transcript.toLowerCase();
-                  for(let word in wordToOperator) {
-                      const operator = wordToOperator[word];
-                      transcript = transcript.replace(new RegExp(word, 'g'), operator);
-                  }
-      
-                  for(let word in numberWordsToNumbers) {
-                      const number = numberWordsToNumbers[word];
-                      transcript = transcript.replace(new RegExp("\\b" + word + "\\b", 'g'), number);
-                  }
-  
-                  if (transcript.trim() === '') {
-                      outputDiv.innerText = 'No valid input detected';
-                      return;
-                  }
-      
-                  inputDiv.innerText = transcript;
-                  calculateInput();
-              }
-          }
-      };
-      
-      recognition.start();
+  function handleVoiceInput() {
+    const micButton = document.querySelector(".voice .material-icons");
+    micStatus = !micStatus; // This will toggle the status of the microphone.
+    
+    if (micStatus) {
+        micButton.classList.add("mic-on");
+        micButton.classList.remove("mic-off");
+    } else {
+        micButton.classList.add("mic-off");
+        micButton.classList.remove("mic-on");
     }
-  });
-  
+
+    const recognition = new window.webkitSpeechRecognition();
+    recognition.interimResults = true;
+    recognition.continuous = false;
+    recognition.lang = 'en-US';
+
+    recognition.onresult = (event) => {
+        for(let i = event.resultIndex; i < event.results.length; ++i) {
+            if(event.results[i].isFinal) {
+                let transcript = event.results[i][0].transcript.toLowerCase();
+                if (transcript.trim() === 'clear') {
+                    clearInput();
+                    return;
+                } else if (transcript.trim() === 'back') {
+                    deleteLastInput();
+                    return;
+                }
+    
+                for(let word in wordToOperator) {
+                    const operator = wordToOperator[word];
+                    transcript = transcript.replace(new RegExp(word, 'g'), operator);
+                }
+    
+                for(let word in numberWordsToNumbers) {
+                    const number = numberWordsToNumbers[word];
+                    transcript = transcript.replace(new RegExp("\\b" + word + "\\b", 'g'), number);
+                }
+    
+                if (transcript.trim() === '') {
+                    outputDiv.innerText = 'No valid input detected';
+                    return;
+                }
+    
+                inputDiv.innerText = transcript;
+                calculateInput();
+            }
+        }
+    };
+    
+    // Function to remove the last character or word from the input
+    function deleteLastInput() {
+        inputDiv.innerText = inputDiv.innerText.trim().slice(0, -1);
+    }
+    
+
+    recognition.onend = () => {
+        if (micStatus) { // If micStatus is true, which means mic is ON
+            recognition.start(); // Keep the microphone on
+        }
+    }
+
+    recognition.start();
+}
+});
+
+
+
+
+
+
+
+
+
+

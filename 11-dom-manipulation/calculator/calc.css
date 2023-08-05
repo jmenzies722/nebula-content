@@ -13,7 +13,7 @@ body {
   position: relative;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to right, #2b2c2d, #3a8484);
+  background: linear-gradient(to right, #1e9b91, #1db090);
 }
 
 body::before {
@@ -62,7 +62,7 @@ body::before {
   flex-direction: column;
   justify-content: space-around;
   padding: 2rem;
-  color: #48b1b1;
+  color: #1aba8a;
   font-size: 2.5em;
   line-height: 1.2;
   overflow: auto;
@@ -83,7 +83,8 @@ body::before {
   align-items: center;  
   height: 60px; 
   border-radius: 8px; 
-  color: rgb(22, 169, 177);  
+  cursor: pointer;
+  color: rgb(23, 173, 155);  
   font-size: 1.5em; 
   background: rgba(0, 0, 0, 0.4); 
   transition: background 0.3s; 
@@ -115,7 +116,6 @@ body::before {
   align-items: center;
   height: 60px;
   border-radius: 8px;
-  color: #3a8484;
   font-size: 1.5em;
   background: rgba(0, 0, 0, 0.4);
   transition: background 0.3s;
@@ -131,6 +131,15 @@ body::before {
 .key.voice:active {
   background: rgba(0, 0, 0, 0.6);
 }
+
+.mic-on {
+  color: rgb(215, 5, 5);
+}
+
+.mic-off {
+  color: rgb(21, 160, 116);
+}
+
 
 .tooltip {
   display: none;
