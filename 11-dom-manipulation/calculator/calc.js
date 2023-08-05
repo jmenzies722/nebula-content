@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let op = operators.pop();
   
         if (typeof num1 !== 'number' || typeof num2 !== 'number' || typeof op !== 'string') {
-          throw new Error("Error During Calculation Please Try Again❗");
+          throw new Error("❌ Oops! There was an error during calculation. Please try again! ❗");
         }
   
         if (op === '/' && num2 === 0) {
