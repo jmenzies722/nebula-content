@@ -178,3 +178,12 @@ body {
     margin-left: 3px; /
   }
   
+  footer {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: #352f2ff8;
+    padding: 50px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
