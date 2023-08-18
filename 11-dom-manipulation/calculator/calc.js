@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let segments = expression.match(/(\d+\.?\d*)|[\+\-\*\/]|%/g);
   
         if (!segments) {
-          throw new Error("Invalid input!");
+          throw new Error("Invalid input❗");
         }
   
         for (let segment of segments) {
@@ -150,7 +150,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-  
+
+
     /*
      Section 6: Event Listener on Key Press
      This event listener allows the user to use the calculator with their keyboard.
@@ -172,16 +173,18 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
-  
-    // Section 7: Voice Recognition
-  // Function responsible for voice recognition.
-  function handleVoiceInput() {
+// Section 7: Voice Recognition
+// Function responsible for voice recognition.
+let micOffCount = 0; // Counting 'mic off' commands
+
+function handleVoiceInput() {
     const micButton = document.querySelector(".voice .material-icons");
     micStatus = !micStatus; // This will toggle the status of the microphone.
     
     if (micStatus) {
         micButton.classList.add("mic-on");
         micButton.classList.remove("mic-off");
+        micOffCount = 0; // Reset the counter when mic is turned on
     } else {
         micButton.classList.add("mic-off");
         micButton.classList.remove("mic-on");
@@ -202,8 +205,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else if (transcript.trim() === 'back') {
                     deleteLastInput();
                     return;
+                } else if (transcript.trim() === 'mic off') {
+                    micOffCount++;
+                    if(micOffCount >= 1) {
+                        micButton.classList.add("mic-off");
+                        micButton.classList.remove("mic-on");
+                        micOffCount = 0; // Reset the counter
+                        micStatus = false; // Turn off the mic
+                        return;
+                    }
                 }
-    
+
                 for(let word in wordToOperator) {
                     const operator = wordToOperator[word];
                     transcript = transcript.replace(new RegExp(word, 'g'), operator);
@@ -230,7 +242,6 @@ document.addEventListener('DOMContentLoaded', () => {
         inputDiv.innerText = inputDiv.innerText.trim().slice(0, -1);
     }
     
-
     recognition.onend = () => {
         if (micStatus) { // If micStatus is true, which means mic is ON
             recognition.start(); // Keep the microphone on
@@ -240,13 +251,3 @@ document.addEventListener('DOMContentLoaded', () => {
     recognition.start();
 }
 });
-
-
-
-
-
-
-
-
-
-

@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #ff00cc;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #333399, #ff00cc);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #333399, #ff00cc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+  backdrop-filter: blur(10px);
+}
+
+.main-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.side-by-side {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Adjust as needed */
+  width: 100%;
+  max-width: 1000px; /* Adjust as needed */
+  margin: 0 auto;
+}
+
+.container {
+  flex: 1;
+  background-color: rgba(73, 73, 73, 0.822);
+  border-radius: 20px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-right: 10px; /* Adjust spacing */
+}
+
+.spotify-container {
+  flex: 1;
+  background-color: rgba(73, 73, 73, 0.822);
+  border-radius: 20px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-left: 10px; /* Adjust spacing */
+}
+
+h1 {
+  margin-top: 0;
+  color: #333;
+  font-size: 24px;
+  text-align: center;
+}
+
+/* Rest of your existing CSS ... */
+
+/* Rest of your existing CSS ... */
+
+.input-container {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.input-container input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  background-color: #f7f7f73f;
+  font-size: 14px;
+  color: #333;
+}
+
+.input-container button {
+  padding: 10px 15px;
+  background-color: #595a5c;
+  color: white;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.input-container button:hover {
+  background-color: #0056b3;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  padding: 12px;
+  background-color: #f7f7f7;
+  border-radius: 6px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.task:hover {
+  background-color: #e8e8e8;
+  transform: translateY(-2px);
+}
+
+.task.completed {
+  background-color: #e0f5e0;
+  text-decoration: line-through;
+}
+
+.task-actions {
+  margin-left: auto;
+}
+
+.task-actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #888;
+  font-size: 16px;
+  transition: color 0.2s;
+}
+
+.task-actions button:hover {
+  color: #ff5252;
+}
+
+.task-count {
+  font-size: 14px;
+  color: #888;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.spotify-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.spotify-container iframe {
+  width: 100%;
+  height: 450px;
+  border: none;
+}

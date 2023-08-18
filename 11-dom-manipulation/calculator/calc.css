@@ -16,6 +16,30 @@ body {
   background: linear-gradient(to right, #1e9b91, #1db090);
 }
 
+header {
+  text-align: center;
+  background-color: rgba(34, 37, 45, 0.8);  /* match with your app background */
+  padding: 20px;
+  border-radius: 1.5rem;
+  margin-bottom: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #1aba8a;  /* match with your display color */
+  margin-bottom: 10px;
+  font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+  font-size: 1.2em;
+  color: rgb(23, 173, 155);  /* match with your key color */
+  font-family: 'Roboto', sans-serif;
+}
+
+
 body::before {
   content: "";
   position: absolute;
@@ -147,8 +171,8 @@ body::before {
   background: #333;
   color: #fff;
   padding: 15px;
-  border-radius: 5px;
-  font-size: 0.9em; 
+  border-radius: 10px;
+  font-size: 16px; 
   line-height: 1.4em;
   bottom: 120%;
   left: 50%;
