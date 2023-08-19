@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool 2D Rectangle</title>
+
+    <style>
+        body {
+            background: #ff00cc;  
+            background: -webkit-linear-gradient(to right, #333399, #ff00cc);  
+            background: linear-gradient(to right, #333399, #ff00cc); 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+
+        canvas {
+            border: 2px solid #333;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="400" height="400"></canvas>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const canvas = document.getElementById('myCanvas');
+            const ctx = canvas.getContext('2d');
+
+            // Set the rectangle's position and dimensions
+            const x = 50;
+            const y = 50;
+            const width = 250;
+            const height = 150;
+
+            // Set the rectangle's fill color
+            ctx.fillStyle = 'purple';
+
+            // Draw the filled rectangle
+            ctx.fillRect(x, y, width, height);
+
+            // Set the rectangle's border color
+            ctx.strokeStyle = 'black';
+
+            // Draw the rectangle's border (stroke)
+            ctx.strokeRect(x, y, width, height);
+        });
+    </script>
+</body>
+</html>
